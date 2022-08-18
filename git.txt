@@ -1,0 +1,64 @@
+cmd prompt
+
+git --version (or) git
+
+ssh-keygen
+enter
+enter
+enter
+
+C:/user/asus/ssh/pubfile/open/copy/paste in github setting ssh key
+
+// check
+ssh -T git@github.com
+
+git config --global user.name 'myatmink'
+git config --global user.email 'myatminkhant725@gmail.com'
+
+// check
+git config user.name
+git config email.name
+
+
+git init
+
+git remote add origin git@github.com:myatmink/pttsoftware.git
+
+// check
+git remote -v
+
+// check *
+git status
+
+// add existing file to git folder
+git add -A
+
+// comment
+git commit -m '26 may 2022'
+
+// upload
+git push -u origin master
+
+// edit pee git status mhr modified: red phik
+git add -A
+git status
+git commit
+git push
+
+
+// command
+cd/
+D:
+dir
+cd
+
+HEROKU (heroku.com / deploy)
+
+git init
+heroku login
+heroku git:remote -a wdf-project
+git status
+git add .
+git commit -am '26 May 2022'
+git push heroku master
+heroku open

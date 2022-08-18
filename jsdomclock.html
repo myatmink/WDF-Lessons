@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dom Clock</title>
+	<style type="text/css">
+		
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h3 id="display">9:46:50 AM Sunday</h3>
+
+	<script type="text/javascript">
+		
+		let getdisplay = document.getElementById('display');
+
+		const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+		// console.log(days);
+		// console.log(days[1]);
+
+		function startclock(){
+
+			let getdate = new Date();
+
+			let gethours = getdate.getHours();
+
+			let getminutes = getdate.getMinutes();
+
+			let getseconds = getdate.getSeconds();
+
+			let getday = getdate.getDay();
+
+			let getampm;
+
+			switch(gethours > 12){
+				case true:
+				getampm = 'PM';
+				gethours = gethours - 12;
+				break;
+				case false:
+				getampm = 'AM';
+				break;
+			};
+
+			let setclock = gethours + ':' + getminutes + ':' + getseconds + ' ' + getampm + ' ' + days[getday];
+
+			getdisplay.textContent = setclock;
+		}
+
+		startclock(); // စတာနဲ့အလုပ်လုပ်စေချင်လို့
+		setInterval(startclock,1000);
+
+	</script>
+
+</body>
+</html>

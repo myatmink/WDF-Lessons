@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text Writing</title>
+</head>
+<body>
+
+	<div>
+		<p id="display"></p>
+	</div>
+
+	
+
+
+	<script type="text/javascript">
+		
+		let getdisplay = document.getElementById('display');
+		const paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+		let i = 0;
+		let j = paragraph.length;
+		// console.log(i,j);
+
+
+		// function startwriting(){
+		// 	getdisplay.textContent += paragraph[i];
+		// 	i++;
+
+		// 	if(i === j) clearInterval(stopwriting);
+		// }
+
+		// let stopwriting = setInterval(startwriting,10);
+
+
+		function startwriting(){
+			getdisplay.innerHTML += paragraph[i];
+			i++;
+
+			stopwriting(i,j);
+		}
+
+		function stopwriting(start,end){
+
+			if(start === end){
+				clearInterval(stoptext);
+			}
+
+		}
+
+		let stoptext = setInterval(startwriting,5);
+
+	</script>
+
+</body>
+</html>

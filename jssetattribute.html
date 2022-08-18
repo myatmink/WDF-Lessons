@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Set Attribute</title>
+</head>
+<body>
+
+	<div>
+		<h1>Say Something</h1>
+		<p>I am Maung Maung. I'm 27 years old and I live in Mandalay. I have elder brothers.</p>
+		<p>I am Su Su. I'm 30 years old and I live in Yangon. I have elder brothers.</p>
+	</div>
+
+
+
+	<script type="text/javascript">
+		
+		// console.log(document.getElementsByTagName('h1'));
+		// console.log(document.getElementsByTagName('p'));
+
+		let geth1tag = document.getElementsByTagName('h1');
+		let getptag = document.getElementsByTagName('p');
+
+		// geth1tag[0].textContent = 'My Story';
+		// getptag[1].innerText = 'hay i am working';
+
+		geth1tag[0].setAttribute('style','text-align:center');
+		getptag[1].setAttribute('style','background-color:grey; color:#fff; padding: 3px; border: 2px solid green;');
+
+		console.log(getptag[1].getAttribute('style'));
+		console.log(getptag[0].getAttribute('class'));
+
+		getptag[1].removeAttribute('style');
+		getptag[0].removeAttribute('class');
+
+	</script>
+
+</body>
+</html>
